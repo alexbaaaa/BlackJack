@@ -1,19 +1,24 @@
 class Play {
-    constructor(deck,discard) {
-        this.ramdon =  Math.floor(Math.random()*7);
-
+    constructor(deck,discard,hand) {
+        
+        this.ramdon =  Math.floor(Math.random()*deck.length);
         this.valorR = deck.splice(this.ramdon.floor,1);
-        this.hand = [] 
-
-        this.hand.push(this.valorR);
+        hand.push(this.valorR);
         discard.push(this.valorR);
 
-        console.log(this.ramdon);
-        console.log(deck);
-        console.log(discard);
-        console.log(this.hand);
+        this.ramdon =  Math.floor(Math.random()*deck.length);
+        this.valorR = deck.splice(this.ramdon.floor,1);
+        hand.push(this.valorR);
+        discard.push(this.valorR);
+        
+
+
+        console.log('numero ramdom: '+this.ramdon);
+        console.log('baraja'+deck);
+        console.log('descartes'+discard);
+        console.log(hand);
     }
-    
+
 }
 
 export {Play}
