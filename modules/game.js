@@ -1,28 +1,28 @@
 import {Deck} from './deck.js';
+import {Player} from './player.js';
 
 class Game {
     constructor() {
         this.deckGame = new Deck();
+        this.player = new Player();
+        this.handValue = 0;
         
     }
 
     initGame(){
-        this.ramdon =  Math.floor(Math.random()*this.deckGame._deck.length);
-        this.valorR = this.deckGame.deck.splice(this.ramdon.floor,1);
-        this.deckGame._hand.push(this.valorR);
-        //discard.push(this.valorR);
-
-        this.ramdon =  Math.floor(Math.random()*this.deckGame._deck.length);
-        this.valorR = this.deckGame.deck.splice(this.ramdon.floor,1);
-        this.deckGame._hand.push(this.valorR);
-        //discard.push(this.valorR);
-        
-
-
-        console.log('numero ramdom: '+this.ramdon);
-        console.log('baraja'+this.deckGame.deck);
-        //console.log('descartes'+discard);
-        console.log(this.deckGame._hand);
+        while(this.player._hand.length < 2){
+            let random =  Math.floor(Math.random()*this.deckGame._deck.length);
+            let valorR = this.deckGame._deck.splice(random,1)[0]; 
+            this.player._hand.push(valorR);
+            
+        }
+        return this.player._hand.toString().replaceAll(',',' ');
+    }
+    addCard(){
+        let random =  Math.floor(Math.random()*this.deckGame._deck.length);
+        let valorR = this.deckGame._deck.splice(random,1)[0]; 
+        this.player._hand.push(valorR);
+        return this.player._hand.toString().replaceAll(',',' ');
     }
 }
 

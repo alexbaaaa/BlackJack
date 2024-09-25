@@ -1,15 +1,16 @@
 class Deck {
     constructor(){
-        this._deck = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18];
-        this._hand = [];
-        this.discard = [];
+        this.cardSuits = ['Corazones', 'Diamantes', 'Tréboles', 'Picas'];
+        this.values  = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
+        this._deck = [];
+        this.cardSuits.forEach((element) => {
+            this.values.forEach((value) => { this._deck.push(value+ ' '+element)})
+        });
     }
     get deck(){
         return this._deck;
     }
     
-    get hand(){
-        return this._hand;
-    }
+    
 }
 export {Deck}
