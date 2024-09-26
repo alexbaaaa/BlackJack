@@ -2,8 +2,8 @@ import {Deck} from './deck.js';
 import {Player} from './player.js';
 
 class Game {
-    constructor() {
-        this.deckGame = new Deck();
+    constructor(typeDeck) {
+        this.deckGame = new Deck(typeDeck);
         this.player = new Player();
         this.handValue = 0;
         

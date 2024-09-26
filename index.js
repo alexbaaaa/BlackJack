@@ -1,5 +1,9 @@
 import {Game} from './modules/game.js';
-var game  = new Game();
+import { TYPESDECKS } from './modules/config/typesDeck.js';
+//var game  = new Game(TYPESDECKS.ESPDECK);
+var game  = new Game(TYPESDECKS.POKERDECK);
+
+
 // Todo lo relacionado con la interfaz lo llevare a la clase Ui
 var addCard = document.getElementById('addCard');
 var leaveit = document.getElementById('leaveit');
