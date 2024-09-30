@@ -1,28 +1,33 @@
 import {Game} from './modules/game.js';
 import { TYPESDECKS } from './modules/config/typesDeck.js';
+import { GENERAL } from './modules/general.js';
+//PROVISIONAL
+console.log(GENERAL.buildDeck());
+
+
 //var game  = new Game(TYPESDECKS.ESPDECK);
-var game  = new Game(TYPESDECKS.POKERDECK);
+// var game  = new Game(TYPESDECKS.POKERDECK);
 
 
-// Todo lo relacionado con la interfaz lo llevare a la clase Ui
-var addCard = document.getElementById('addCard');
-var leaveit = document.getElementById('leaveit');
-var endGame = document.getElementById('endGame');
-var texto = document.getElementById('texto');
-var firstHand;
+// // Todo lo relacionado con la interfaz lo llevare a la clase Ui
+// var addCard = document.getElementById('addCard');
+// var leaveit = document.getElementById('leaveit');
+// var endGame = document.getElementById('endGame');
+// var texto = document.getElementById('texto');
+// var firstHand;
 
-document.getElementById('button').addEventListener('click', () =>{ 
-    firstHand = game.initGame();
-    document.getElementById('button').style.display = 'none';
-    addCard.style.display = 'block';  
-    leaveit.style.display = 'block';  
-    endGame.style.display = 'block';  
-    texto.innerHTML= firstHand; 
-});
+// document.getElementById('button').addEventListener('click', () =>{ 
+//     firstHand = game.initGame();
+//     document.getElementById('button').style.display = 'none';
+//     addCard.style.display = 'block';  
+//     leaveit.style.display = 'block';  
+//     endGame.style.display = 'block';  
+//     texto.innerHTML= firstHand; 
+// });
 
-addCard.addEventListener("click", () =>{
-    texto.innerHTML = game.addCard();
-});
+// addCard.addEventListener("click", () =>{
+//     texto.innerHTML = game.addCard();
+// });
 
 
 

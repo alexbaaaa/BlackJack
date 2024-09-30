@@ -1,5 +1,5 @@
-import { TYPESDECKS } from "./config/typesDeck.js";
-import { Deck } from "./deck.js";
+import { TYPESDECKS } from "./config/typesDeck";
+import { Deck } from "./deck";
 
 export const GENERAL = {
     'nameDeck' : () => {
@@ -10,6 +10,5 @@ export const GENERAL = {
     'Deck' : Deck,
     'buildDeck' : (nameDeck) => {
         //filter con el array de nameDeck
-        return GENERAL.nameDeck().find((name) => name === nameDeck )
     }
 }
