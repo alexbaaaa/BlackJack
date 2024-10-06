@@ -1,13 +1,13 @@
-export const TYPESDECKS = {
-    POKERDECK : {
+export const TYPESDECKS = [
+    {
         name : 'pokerDeck',
         suits : ['Corazones','Rombos','Picas','Treboles'],
-        values : ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
+        values : ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'AS']
     },
-    ESPDECK : {
+    {
         name : 'espDeck',
         suits : ['Bastos','Oros','Espadas','Copas'],
-        values : ['2', '3', '4', '5', '6', '7', '8', '9', 'Sota', 'Caballo', 'Rey']
-    },
+        values : ['1','2', '3', '4', '5', '6', '7', '8', '9', 'Sota', 'Caballo', 'Rey']
+    }
     
-}
+]
