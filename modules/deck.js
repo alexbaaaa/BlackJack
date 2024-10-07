@@ -4,7 +4,7 @@ class Deck {
         this.values  = type.values;
         this._deck = [];
         this.cardSuits.forEach((element) => {
-            this.values.forEach((value) => { this._deck.push(value+ ' de '+element)})
+            this.values.forEach((value) => { this._deck.push(' '+value+ ' de '+element)})
         });
     }
     get deck(){

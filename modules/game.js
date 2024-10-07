@@ -4,28 +4,32 @@ class Game {
     constructor(deckGame) {
         this.deckGame = deckGame;
         this.player = new Player();
+        this.cupier = new Player();
         this.handValue = 0;
         
     }
-
+    ramdomCard() {
+        let random =  Math.floor(Math.random()*this.deckGame.length);
+        return this.deckGame.splice(random,1)[0]; 
+    }
     initGame(){
         while(this.player._hand.length < 2){
-            let random =  Math.floor(Math.random()*this.deckGame.length);
-            let valorR = this.deckGame.splice(random,1)[0]; 
-            this.player._hand.push(valorR);
             
+            this.player._hand.push(this.ramdomCard());
+            this.cupier._hand.push(this.ramdomCard());
         }
         console.log(this.deckGame);
-        console.log(this.player._hand);
-        return this.player._hand.toString().replaceAll(',',' ');
+        return [this.player._hand.toString(),this.cupier._hand.toString()];
     }
     addCard(){
-        let random =  Math.floor(Math.random()*this.deckGame.length);
-        let valorR = this.deckGame.splice(random,1)[0]; 
-        this.player._hand.push(valorR);
+        this.player._hand.push(this.ramdomCard());
+        this.cupier._hand.push(this.ramdomCard());
         
         console.log(this.player._hand);
-        return this.player._hand.toString().replaceAll(',',' ');
+        console.log(this.cupier._hand);
+        console.log(this.deckGame);
+        
+        return [this.player._hand.toString(), this.cupier._hand.toString()];
     }
 }
 

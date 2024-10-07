@@ -20,7 +20,8 @@ let ui = new Ui();
 var addCard = document.getElementById('addCard');
 var leaveit = document.getElementById('leaveit');
 var endGame = document.getElementById('endGame');
-var texto = document.getElementById('texto');
+var textoJ = document.getElementById('textoJ');
+var textoC = document.getElementById('textoC');
 var firstHand;
 
 document.getElementById('button').addEventListener('click', () =>{ 
@@ -29,11 +30,13 @@ document.getElementById('button').addEventListener('click', () =>{
     addCard.style.display = 'block';  
     leaveit.style.display = 'block';  
     endGame.style.display = 'block';  
-    texto.innerHTML= firstHand; 
+    textoJ.innerHTML= "Jugador: " +firstHand[0]; 
+    textoC.innerHTML= "Cupier: " +firstHand[1]; 
 });
 
 addCard.addEventListener("click", () =>{
-    texto.innerHTML = game.addCard();
+    textoJ.innerHTML = "Jugador: " + game.addCard()[0];
+    textoC.innerHTML = "Cupier: " + game.addCard()[1];
 });
 
 
