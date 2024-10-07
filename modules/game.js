@@ -19,7 +19,7 @@ class Game {
             this.cupier._hand.push(this.ramdomCard());
         }
         console.log(this.deckGame);
-        return [this.player._hand.toString(),this.cupier._hand.toString()];
+        return [this.player._hand.toString(), this.cupier._hand.toString()];
     }
     addCard(){
         this.player._hand.push(this.ramdomCard());
